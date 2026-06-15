@@ -1,0 +1,86 @@
+site_name: GED Math Study Platform
+site_description: Comprehensive interactive study guide for GED mathematics
+site_author: Roberto Dirk
+site_url: https://robertodirk.github.io/ged-math-study
+repo_url: https://github.com/Roberto-Dirk/ged-math-study
+repo_name: Roberto-Dirk/ged-math-study
+
+theme:
+  name: material
+  palette:
+    - scheme: light
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: dark
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - content.code.copy
+    - content.tabs.link
+
+plugins:
+  - search
+  - social
+
+markdown_extensions:
+  - pymdownx.emoji
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - admonition
+  - pymdownx.details
+  - tables
+  - footnotes
+  - attr_list
+  - md_in_html
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - js/quiz-engine.js
+  - js/flashcard-engine.js
+
+extra_css:
+  - css/custom.css
+
+nav:
+  - Home: index.md
+  - Content:
+    - Unit 1 - Number and Operations: content/unit-1-numbers.md
+    - Unit 2 - Algebra: content/unit-2-algebra.md
+    - Unit 3 - Geometry: content/unit-3-geometry.md
+    - Unit 4 - Data & Probability: content/unit-4-data.md
+  - Practice:
+    - Quizzes: practice/quizzes.md
+    - Flashcards: practice/flashcards.md
+    - Problem Sets: practice/problem-sets.md
+    - Games: practice/games.md
+  - Study Plans: study-plans.md
+  - Videos: videos.md
+  - Downloads: downloads.md
+  - About: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Roberto-Dirk
+
+copyright: Copyright &copy; 2026 Roberto Dirk - GED Math Study Platform
